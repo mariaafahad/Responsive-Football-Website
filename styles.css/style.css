@@ -30,7 +30,7 @@ body{
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .match-title{
-    font-size: 25px;
+    font-size: 40px;
     font-weight: bold;
     color:rgb(255, 255, 251);
     width: 50%;
@@ -38,6 +38,7 @@ body{
     padding-left: 150px;
 
 }
+
 a{
     background-color: #1d2fce7c;
     color:rgb(246, 247, 255);
@@ -48,7 +49,13 @@ a{
     font-size: 20px;
 
 }
+
 /* players blog style */
+
+.name{
+    color: rgb(61, 38, 38);
+}
+
 .blogs{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -56,11 +63,10 @@ a{
     margin-left: 12%;
     margin-right:7%;
 }
+
 .blogs p{
-    color: rgb(146, 141, 141);
+    color: rgb(97, 78, 78);
 }
-
-
 
 .blog .thumbnail img{
     width: 15vw;
@@ -77,14 +83,14 @@ a{
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
     width: 55%;   
     cursor: pointer;
-    transition: transform .3s;
+    transition: transform .4s;
 }
 
 .blog:hover{
     transform: scale(1.1);
 }
 .blog-info{
-    font: size 16px;
+    font-size: 16px;
    font-weight: 100px;
 }
 
@@ -133,6 +139,7 @@ a:hover{
 }
 
 /* forms styles */
+
 .container-form h1{
     color: rgb(7, 14, 114);
     text-align: center; 
@@ -169,6 +176,7 @@ input[type=text], select, textarea {
     background-color: #fff;
     padding: 20px;
     padding: 50px 500px;
+    color: #182675;
   }
 
   /* footer style */
@@ -176,7 +184,7 @@ input[type=text], select, textarea {
       display: flex;
       justify-content: center;
       align-items: center;
-    margin: 0 auto;
+      margin: 0 auto;
      
   }
   footer img{
@@ -199,4 +207,59 @@ input[type=text], select, textarea {
     align-items: center;
     justify-content: space-around;
     padding: 0px 200px;
+}
+/* media queries */
+
+
+@media all and (max-width: 1200px){
+	.container-form{
+		padding: 0;
+		width: 90%;
+		margin: auto;
+		margin-bottom: 25px;
+	}
+}
+
+
+
+@media all and (max-width: 767px){
+	.highlights{
+		flex-direction: column;
+	}
+	.images {
+		width: 90%;
+		height: auto;
+		margin: auto;
+		display: block;
+	}
+}
+
+@media all and (max-width: 600px){
+	a{
+		font-size: 25px;
+	}
+	.blogs{
+		grid-template-columns: repeat(1,1fr);
+		width: 70%;
+	}
+	footer img {
+		width: auto;
+		max-width: 300px;
+		margin: auto;
+		display: block;
+	}
+	.footer i {
+		margin: 0 5px;
+	}
+	.container-form h1{
+		font-size: 25px;
+	}
+	.match-title {
+		font-size: 35px;
+		font-weight: bold;
+		color: rgb(255, 255, 251);
+		width: 100%;
+		padding-top: 0;
+		padding-left: 0;
+	}
 }
